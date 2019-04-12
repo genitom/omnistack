@@ -22,4 +22,4 @@ app.use(express.json())  // app.use é para cadastrar um modulo dentro do expres
 app.use(express.urlencoded({ extended: true })); // Ele permite que agente envie arquivos em nossas req.
 app.use('/files', express.static(path.resolve(__dirname, "..", "tmp")));
 app.use(require('./routes'))
-app.listen(3339)
+app.listen(process.env.PORT || 3339)
